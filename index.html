@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Matemática</h1>
+        <p>Escolha o seu modo:</p>
+        <button onclick="iniciarJogo('basico')">Modo Básico</button>
+        <button onclick="iniciarJogo('desafio')">Modo Desafio</button>
+
+        <div id="pergunta-container" style="display: none;">
+            <p id="pergunta"></p>
+            <input type="number" id="resposta" placeholder="Digite sua resposta">
+            <button onclick="verificarResposta()">Responder</button>
+        </div>
+
+        <p id="resultado"></p>
+
+        <button onclick="novaPergunta()">Nova Pergunta</button>
+        <button onclick="reiniciarJogo()" style="display: none;">Reiniciar Jogo</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
